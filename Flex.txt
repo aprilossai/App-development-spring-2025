@@ -1,0 +1,44 @@
+import React from 'react';
+import {StyleSheet, View, Text} from 'react-native';
+
+const Flex = () => {
+  return (
+    <View
+      style={[
+        styles.container,
+        {
+          // Try setting `flexDirection` to `"row"`.
+          flexDirection: 'column',
+        },
+      ]}>
+      
+      <View>
+        <Text style={styles.headerText}>Rainbow Colors</Text>
+      </View>
+
+      <View style={{flex: 3, backgroundColor: 'red'}} />
+      <View style={{flex: 3, backgroundColor: 'darkorange'}} />
+      <View style={{flex: 3, backgroundColor: 'yellow'}} />
+      <View style={{flex: 3, backgroundColor: 'green'}} />
+      <View style={{flex: 3, backgroundColor: 'blue'}} />
+      <View style={{flex: 3, backgroundColor: 'indigo'}} /> 
+      <View style={{flex: 3, backgroundColor: 'violet'}} />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+
+  headerText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 10, 
+  }
+});
+
+export default Flex;
