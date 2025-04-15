@@ -1,0 +1,31 @@
+import React from 'react';
+import { TextInput, View, StyleSheet } from 'react-native';
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.input}
+        value="This is Claflin University!"
+        editable={false}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  input: {
+    height: 40,
+    padding: 10,
+    fontSize: 80,
+    borderWidth: 1,
+    borderColor: '#000',
+  },
+});
+
+export default App;
